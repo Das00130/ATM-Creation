@@ -1,21 +1,3 @@
-Programming an ATM in C++.
-
-## Functionalities:
-1. Welcome message and prompt the user to enter a correct password (otherwise they will not proceed further)
-4. Possibilities once logged in: Open a new account, Delete account, Modify account, Transaction, View account, List of accounts and Exit.
-5. After performing desired transaction by the user, it will take the user to the menu screen.
-
-#### Extract: Options
-![png](images/opt.png)
-
-#### Extract: View of the account
-![png](images/view.png)
-
-#### Extract: Withdrawing money
-![png](images/withdraw.png)
-
-
-```cpp
 #include<time.h>
 #include<fstream.h>
 #include<iostream.h>
@@ -311,7 +293,7 @@ void  atm::del()  				//DELETE ACCOUNT
 	 fin.read((char*)&obj,sizeof(obj));
 	 if(ph!=ph1)
 	    fout.write((char*)&obj,sizeof(obj));
-	cout<<endl<<â€ACCOUNT HAS BEEN DELETEDâ€;	
+	cout<<endl<<”ACCOUNT HAS BEEN DELETED”;	
        }
 
      fout.close();
@@ -556,4 +538,3 @@ int main()
       obj.menu();
       return 0;
    }
-```
